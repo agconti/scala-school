@@ -19,7 +19,7 @@ object ProblemSet {
    * Problem 2
    *
    * A perfect square is a number that can be expressed as the product of two
-   * equal integers. Ex. 9 is a perfect square because it can be expressed as 3 * 3
+   * equal integers. Ex. 9 is a perfect square because it can be expressed as 3 * 33
    *
    * If the parameter i is a perfect square, return its square root in an Option.
    * if the parameter i is not a perfect square return an empty Option.
