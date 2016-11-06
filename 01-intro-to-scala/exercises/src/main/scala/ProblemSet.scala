@@ -12,7 +12,7 @@ object ProblemSet {
    */
   def sumOfMultiples(): Int = {
     val limit = 1000
-    val multiples = (0 until limit).filter {num => num % 3 == 0 || num % 5 == 0}
+    val multiples = (0 until limit).filter { num => num % 3 == 0 || num % 5 == 0 }
 
     multiples.sum
   }
@@ -30,7 +30,7 @@ object ProblemSet {
    */
 
   def isPerfect(i: Int): Option[Int] = {
-    val perfectSquare = (1 to i).filter {num => num * num == i}
+    val perfectSquare = (1 to i).filter { num => num * num == i }
 
     perfectSquare.lift(0)
   }
@@ -75,9 +75,20 @@ object ProblemSet {
 
   class Point(x: Double, y: Double)
 
-  def distance(a: Double, b: Double, c: Double, d: Double): Double = {
-    // Implement me
-    -1
+  object Point {
+
+    def distance(a: Point, b: Point) = {
+      val squareDistanceX = Math.pow((a.x - b.x), 2)
+      val squareDistanceY = Math.pow((a.y - b.y), 2)
+
+      Math.sqrt(squareDistanceX + squareDistanceY)
+    }
   }
 
+  def distance(a: Double, b: Double, c: Double, d: Double) = {
+    val a: Point = new Point(a, b)
+    val b: Point = new Point(c, d)
+
+    Point.distance(a, b)
+  }
 }
