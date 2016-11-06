@@ -11,15 +11,18 @@ object ProblemSet {
    *  Find the sum of all the multiples of 3 or 5 below 1000 and return it.
    */
   def sumOfMultiples(): Int = {
-    // Implement me
-    -1
+    val limit = 1000
+    val multiples = (0 until limit).filter {num => num % 3 == 0 || num % 5 == 0}
+
+    multiples.sum
+
   }
 
   /*
    * Problem 2
    *
    * A perfect square is a number that can be expressed as the product of two
-   * equal integers. Ex. 9 is a perfect square because it can be expressed as 3 * 33
+   * equal integers. Ex. 9 is a perfect square because it can be expressed as 3 * 3
    *
    * If the parameter i is a perfect square, return its square root in an Option.
    * if the parameter i is not a perfect square return an empty Option.
@@ -28,7 +31,7 @@ object ProblemSet {
    */
 
   def isPerfect(i: Int): Option[Int] = {
-    // Implement me
+//    1 to i takeWhile (num => i % num != num)
     null
   }
 
