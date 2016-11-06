@@ -41,7 +41,7 @@ object ProblemSet {
    * Return a tuple containing the size and sum of the contents of the list parameter.
    */
   def lengthAndSum(l: List[Double]): (Int, Double) = {
-    (l.size, l.sum)
+    l.size -> l.sum
   }
 
   /*
