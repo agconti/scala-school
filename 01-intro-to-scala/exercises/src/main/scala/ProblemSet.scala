@@ -15,7 +15,6 @@ object ProblemSet {
     val multiples = (0 until limit).filter {num => num % 3 == 0 || num % 5 == 0}
 
     multiples.sum
-
   }
 
   /*
@@ -31,8 +30,9 @@ object ProblemSet {
    */
 
   def isPerfect(i: Int): Option[Int] = {
-//    1 to i takeWhile (num => i % num != num)
-    null
+    val perfectSquare = (1 to i).filter {num => num * num == i}
+
+    perfectSquare.lift(0)
   }
 
   /*
